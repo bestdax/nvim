@@ -112,6 +112,18 @@ return {
 					end,
 				},
 
+				yaml = {
+					function()
+						return {
+							exe = "yamlfmt",
+							args = {
+								"-",
+							},
+							stdin = true,
+						}
+					end,
+				},
+
 				tex = {
 					function()
 						return {
@@ -179,6 +191,43 @@ return {
 				},
 
 				typescriptreact = {
+					function()
+						return {
+							exe = "prettier",
+							args = {
+								"--stdin-filepath",
+								util.escape_path(util.get_current_buffer_file_path()),
+							},
+							stdin = true,
+						}
+					end,
+				},
+				-- HTML / CSS 使用 prettier 格式化
+				html = {
+					function()
+						return {
+							exe = "prettier",
+							args = {
+								"--stdin-filepath",
+								util.escape_path(util.get_current_buffer_file_path()),
+							},
+							stdin = true,
+						}
+					end,
+				},
+				css = {
+					function()
+						return {
+							exe = "prettier",
+							args = {
+								"--stdin-filepath",
+								util.escape_path(util.get_current_buffer_file_path()),
+							},
+							stdin = true,
+						}
+					end,
+				},
+				scss = {
 					function()
 						return {
 							exe = "prettier",
