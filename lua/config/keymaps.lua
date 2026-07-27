@@ -88,6 +88,8 @@ keymap("t", "<leader>wl", "<c-\\><c-n>:wincmd l<cr>", silent_opts) -- move curso
 -- resize windows with arrows
 keymap("n", "<s-right>", ":vertical resize +2<cr>", opts)
 keymap("n", "<s-left>", ":vertical resize -2<cr>", opts)
+keymap("n", "<s-up>", ":horizontal resize +2<cr>", opts)
+keymap("n", "<s-down>", ":horizontal resize -2<cr>", opts)
 
 -- switches  -- starts with s
 keymap("n", "<leader>se", ":NvimTreeToggle<cr>", opts) -- toggle explorer on the left
